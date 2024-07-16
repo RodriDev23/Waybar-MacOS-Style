@@ -4,7 +4,7 @@ This repository contains a Waybar configuration that emulates the style of the m
 
 Please review the `config.jsonc` file. In some sections, you will need to replace placeholders with your username.
 
-![Menu Bar Screenshot](screenshot.png)
+<img src="screenshot.png" alt="Menu Bar Screenshot" style="width:600px; height:700px;" />
 
 
 
