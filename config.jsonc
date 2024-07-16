@@ -1,0 +1,74 @@
+{
+    // General Waybar configuration
+    "layer": "top",
+    "height": 23,
+    "margin": 0,
+    "spacing": 10,
+    "border-size": 2,
+    "padding": 10,
+    // Modules configuration
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/window",
+        "custom/texttwo",
+        "custom/textthree",
+        "custom/textfour",
+        "custom/textfive"
+    ],
+    "modules-right": [
+        "image#ethernetart",
+        "custom/date",
+        "clock"
+    ],
+    // Module-specific configurations
+    "clock": {
+        "format": "{:%H:%M %p}",
+        "tooltip-format": "{:%A, %B %d, %Y}"
+    },
+    "custom/date": {
+        // put you user here
+        "exec": "/home/username/.config/waybar/scripts/date/custom_date.sh",
+        "interval": 60,
+        "tooltip": false
+    },
+    "hyprland/window": {
+        "format": "{class}",
+        "max-length": 20,
+        "rewrite": {
+            // if any window is focused display Finder
+            "^(?!.*\\S).*": "Finder"
+        }
+    },
+    "custom/launcher": {
+        "format": ""
+    },
+    "custom/texttwo": {
+        "exec": "echo 'File'",
+        "interval": 60,
+        "return-type": "plain",
+        "on-click": "Thunar" //or you favorite Filer Explorer
+    },
+    "custom/textthree": {
+        "exec": "echo 'Edit'",
+        "interval": 60,
+        "return-type": "plain",
+        "on-click": "krita" // or you favorite Image editor
+    },
+    "custom/textfour": {
+        "exec": "echo 'View'",
+        "interval": 60,
+        "return-type": "plain"
+    },
+    "custom/textfive": {
+        "exec": "echo 'Help'",
+        "interval": 60,
+        "return-type": "plain",
+        "on-click": "yad --title='Help' --text-info --width=600 --height=400 --filename=<(man hyprland | col -bx)"
+    },
+    "image#ethernetart": {
+        // put you username here
+        "path": "/home/$username/.config/waybar/icons/wifi-white.png",
+        "size": 13,
+        "interval": 60
+    }
+}
