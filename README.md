@@ -1,4 +1,4 @@
-# Waybar Configuration for macOS Style Menu Bar
+# Waybar Config - macOS Menu Bar Style
 
 This repository contains a Waybar configuration that emulates the style of the menu bar in macOS.
 
